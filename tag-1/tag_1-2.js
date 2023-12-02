@@ -1,5 +1,6 @@
-import { splitStringPerLine } from "../utils/line-splitter.js";
-import { getFinalCalibrationValue, sumUpCalibrationValues } from "./helper.js";
+import { splitStringPerLine, splitCharactersAndDegits } from "../utils/splitter.js";
+import { getFinalCalibrationValue } from "./helper.js";
+import { sumUpValues } from "../utils/maths.js";
 
 const digitMapping = new Map([
     ['one', '1'],
@@ -21,11 +22,11 @@ export function printRealSumOfCalibrationValues(fileData) {
         })
         .filter(Boolean)
 
-    console.log("Tag 1.2: Real sum of calibration values: ", sumUpCalibrationValues(lines))
+    console.log("Tag 1.2: Real sum of calibration values: ", sumUpValues(lines))
 }
 
 function getCalibrationValuesFromLine(line) {
-    return line.split(/(\d+|\D+)/)
+    return splitCharactersAndDegits(line)
         .filter(Boolean)
         .map(value => {
             if (digitMapping.has(value)) {

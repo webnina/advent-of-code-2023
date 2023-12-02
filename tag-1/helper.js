@@ -1,9 +1,7 @@
-export function sumUpCalibrationValues(values) {
-    return values.reduce((a, b) => Number(a) + Number(b), 0)
-}
+import { removeCharacters } from "../utils/splitter.js";
 
 export function getFinalCalibrationValue(line) {
-    const numberValues = line.split(/\D+/).join("") // D+ filtert alle Zahlen heraus
+    const numberValues = removeCharacters(line)
     switch(numberValues.length) {
         case 1:
             return numberValues + numberValues
