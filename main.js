@@ -1,10 +1,12 @@
 import { readFile } from './utils/file-reader.js'
-import { printSumOfCalibrationValues } from "./tag-1/tag_1-1.js";
+import { printSumOfCalibrationValues } from "./tag-1/tag_1-1.js"
 import { printRealSumOfCalibrationValues } from "./tag-1/tag_1-2.js"
-import { printAmountOfPossibleGames } from "./tag-2/tag_2-1.js";
-import { printSumOfPower } from "./tag-2/tag_2-2.js";
-import { printSumOfAllPartNumbers } from "./tag-3/tag_3-1.js";
-import { printSumOfAlGearRatios } from "./tag-3/tag_3-2.js";
+import { printAmountOfPossibleGames } from "./tag-2/tag_2-1.js"
+import { printSumOfPower } from "./tag-2/tag_2-2.js"
+import { printSumOfAllPartNumbers } from "./tag-3/tag_3-1.js"
+import { printSumOfAlGearRatios } from "./tag-3/tag_3-2.js"
+import { printPointsInTotal } from "./tag-4/tag_4-1.js"
+import { printAmountOfScratchcardCopies } from "./tag-4/tag_4-2.js"
 
 // Tag 1
 let fileName = './tag-1/aufgabe.txt'
@@ -20,3 +22,8 @@ readFile(fileName, printSumOfPower)
 fileName = './tag-3/aufgabe.txt'
 readFile(fileName, printSumOfAllPartNumbers)
 readFile(fileName, printSumOfAlGearRatios)
+
+// Tag 4
+fileName = './tag-4/aufgabe.txt'
+readFile(fileName, printPointsInTotal)
+readFile(fileName, printAmountOfScratchcardCopies)
