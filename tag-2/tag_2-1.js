@@ -11,7 +11,7 @@ export function printAmountOfPossibleGames(fileData) {
     const gameIds = splitStringPerLine(fileData)
         .map(game => {
             let [gameId, currentGame] = game.split(":")
-            return isGamePossible(currentGame) ? removeCharacters(gameId) : ""
+            return isGamePossible(currentGame) ? removeCharacters(gameId).join("") : ""
         })
         .filter(Boolean)
     console.log("Tag 2.1: Sum of IDs from possible games: ", sumUpValues(gameIds))

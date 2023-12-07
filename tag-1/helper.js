@@ -1,7 +1,7 @@
 import { removeCharacters } from "../utils/splitter.js";
 
 export function getFinalCalibrationValue(line) {
-    const numberValues = removeCharacters(line)
+    const numberValues = removeCharacters(line).join("")
     switch(numberValues.length) {
         case 1:
             return numberValues + numberValues

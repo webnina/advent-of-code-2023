@@ -3,7 +3,7 @@ export function splitStringPerLine(input) {
 }
 
 export function removeCharacters(value) {
-    return value.split(/\D+/).join("")
+    return value.split(/\D+/).filter(Boolean)
 }
 
 export function splitCharactersAndDegits(value) {

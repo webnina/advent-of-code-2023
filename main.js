@@ -7,6 +7,7 @@ import { printSumOfAllPartNumbers } from "./tag-3/tag_3-1.js"
 import { printSumOfAlGearRatios } from "./tag-3/tag_3-2.js"
 import { printPointsInTotal } from "./tag-4/tag_4-1.js"
 import { printAmountOfScratchcardCopies } from "./tag-4/tag_4-2.js"
+import { printLowestLocation } from "./tag-5/tag_5-1.js"
 
 // Tag 1
 let fileName = './tag-1/aufgabe.txt'
@@ -27,3 +28,7 @@ readFile(fileName, printSumOfAlGearRatios)
 fileName = './tag-4/aufgabe.txt'
 readFile(fileName, printPointsInTotal)
 readFile(fileName, printAmountOfScratchcardCopies)
+
+// Tag 5
+fileName = './tag-5/aufgabe.txt'
+readFile(fileName, printLowestLocation)
