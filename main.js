@@ -8,10 +8,13 @@ import { printSumOfAlGearRatios } from "./tag-3/tag_3-2.js"
 import { printPointsInTotal } from "./tag-4/tag_4-1.js"
 import { printAmountOfScratchcardCopies } from "./tag-4/tag_4-2.js"
 import { printLowestLocation } from "./tag-5/tag_5-1.js"
+import { printLowestLocationFromSeedRanges } from "./tag-5/tag_5-2.js"
+import { printNumberOfWaysToBeatRecord } from "./tag-6/tag_6-1.js"
+import { printNumberOfWaysToBeatRecordInBigGame } from "./tag-6/tag_6-2.js"
 
 // Tag 1
 let fileName = './tag-1/aufgabe.txt'
-readFile(fileName, printSumOfCalibrationValues)
+/*readFile(fileName, printSumOfCalibrationValues)
 readFile(fileName, printRealSumOfCalibrationValues)
 
 // Tag 2
@@ -30,5 +33,11 @@ readFile(fileName, printPointsInTotal)
 readFile(fileName, printAmountOfScratchcardCopies)
 
 // Tag 5
-fileName = './tag-5/aufgabe.txt'
+fileName = './tag-5/test-data.txt'
 readFile(fileName, printLowestLocation)
+readFile(fileName, printLowestLocationFromSeedRanges)*/
+
+// Tag 6
+fileName = './tag-6/aufgabe.txt'
+readFile(fileName, printNumberOfWaysToBeatRecord)
+readFile(fileName, printNumberOfWaysToBeatRecordInBigGame)
