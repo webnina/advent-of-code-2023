@@ -11,6 +11,7 @@ import { printLowestLocation } from "./tag-5/tag_5-1.js"
 import { printLowestLocationFromSeedRanges } from "./tag-5/tag_5-2.js"
 import { printNumberOfWaysToBeatRecord } from "./tag-6/tag_6-1.js"
 import { printNumberOfWaysToBeatRecordInBigGame } from "./tag-6/tag_6-2.js"
+import { printTotalWinningOfCards } from "./tag-7/tag_7-1.js"
 
 // Tag 1
 let fileName = './tag-1/aufgabe.txt'
@@ -35,9 +36,13 @@ readFile(fileName, printAmountOfScratchcardCopies)
 // Tag 5
 fileName = './tag-5/test-data.txt'
 readFile(fileName, printLowestLocation)
-readFile(fileName, printLowestLocationFromSeedRanges)*/
+readFile(fileName, printLowestLocationFromSeedRanges)
 
 // Tag 6
 fileName = './tag-6/aufgabe.txt'
 readFile(fileName, printNumberOfWaysToBeatRecord)
-readFile(fileName, printNumberOfWaysToBeatRecordInBigGame)
+readFile(fileName, printNumberOfWaysToBeatRecordInBigGame)*/
+
+// Tag 7
+fileName = './tag-7/aufgabe.txt'
+readFile(fileName, printTotalWinningOfCards)
