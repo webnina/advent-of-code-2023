@@ -40,3 +40,17 @@
   253603890
 - [Part 2](https://github.com/webnina/advent-of-code-2023/blob/main/tag-7/tag_7-2.js)
   coming soon
+
+## Tag 8: coming soon
+
+## Tag 9: Oase
+- [Part 1](https://github.com/webnina/advent-of-code-2023/blob/main/tag-9/tag_9-1.js)
+  1930746032
+- [Part 2](https://github.com/webnina/advent-of-code-2023/blob/main/tag-9/tag_9-2.js)
+  1154
+
+## Tag 10: Tier
+- [Part 1](https://github.com/webnina/advent-of-code-2023/blob/main/tag-10/tag_10-1.js)
+  6701
+- [Part 2](https://github.com/webnina/advent-of-code-2023/blob/main/tag-10/tag_10-2.js)
+  coming soon
