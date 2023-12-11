@@ -24,7 +24,7 @@ export function sort(array, strengthMap, withJoker) {
     playWithJoker = withJoker
     myStrengthMap = strengthMap
 
-    return array.sort((a, b) =>  isHandWeakerThanNext(a, b))
+    return array.sort((a, b) => isHandWeakerThanNext(a, b))
 }
 
 function isHandWeakerThanNext(hand, next) {
