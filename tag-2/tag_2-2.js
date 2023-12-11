@@ -1,5 +1,5 @@
-import { splitStringPerLine } from "../utils/splitter.js";
-import { multiplyValues, sumUpValues } from "../utils/maths.js";
+import { splitStringPerLine } from "../utils/splitter.js"
+import { multiplyValues, sumUpValues } from "../utils/maths.js"
 
 export function printSumOfPower(fileData) {
     const powerOfGames = splitStringPerLine(fileData)

@@ -39,7 +39,7 @@
 - [Part 1](https://github.com/webnina/advent-of-code-2023/blob/main/tag-7/tag_7-1.js)
   253603890
 - [Part 2](https://github.com/webnina/advent-of-code-2023/blob/main/tag-7/tag_7-2.js)
-  coming soon
+  253630098
 
 ## Tag 8: coming soon
 

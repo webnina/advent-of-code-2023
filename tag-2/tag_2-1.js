@@ -1,5 +1,5 @@
-import { removeCharacters, splitStringPerLine } from "../utils/splitter.js";
-import { sumUpValues } from "../utils/maths.js";
+import { removeCharacters, splitStringPerLine } from "../utils/splitter.js"
+import { sumUpValues } from "../utils/maths.js"
 
 const maxCubes = new Map([
     ['red', 12],

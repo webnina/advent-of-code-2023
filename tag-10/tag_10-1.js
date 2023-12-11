@@ -1,15 +1,10 @@
 import { splitStringPerLine } from "../utils/splitter.js"
 
-const NORTH = [-1, 0]
-const WEST = [0, -1]
-const SOUTH = [1, 0]
-const EAST = [0, 1]
-
 const Direction = {
-    EAST: 1,
-    NORTH: 2,
-    WEST: 3,
-    SOUTH: 4
+    EAST: [0, 1],
+    NORTH: [-1, 0],
+    WEST: [0, -1],
+    SOUTH: [1, 0]
 }
 let currentDirection = Direction.SOUTH
 
@@ -21,55 +16,10 @@ export function printPointFarthestFromStart(fileData) {
     let point = 0
     let walkingDir
     while(currentSign !== 'S') {
-        switch (currentSign) {
-            case '|':
-                walkingDir = currentDirection === Direction.NORTH ? NORTH : SOUTH
-                break
-            case '-':
-                walkingDir = currentDirection === Direction.WEST ? WEST : EAST
-                break
-            case 'L':
-                if (currentDirection === Direction.SOUTH) {
-                    currentDirection = Direction.EAST
-                    walkingDir = EAST
-                } else {
-                    currentDirection = Direction.NORTH
-                    walkingDir = NORTH
-                }
-                break
-            case 'J':
-                if (currentDirection === Direction.EAST) {
-                    currentDirection = Direction.NORTH
-                    walkingDir = NORTH
-                } else {
-                    currentDirection = Direction.WEST
-                    walkingDir = WEST
-                }
-                break
-            case '7':
-                if (currentDirection === Direction.NORTH) {
-                    currentDirection = Direction.WEST
-                    walkingDir = WEST
-                } else {
-                    currentDirection = Direction.SOUTH
-                    walkingDir = SOUTH
-                }
-                break
-            default:
-            case 'F':
-                if (currentDirection === Direction.NORTH) {
-                    currentDirection = Direction.EAST
-                    walkingDir = EAST
-                } else {
-                    currentDirection = Direction.SOUTH
-                    walkingDir = SOUTH
-                }
-                break
-        }
-
-        currentSign = map[currentPoint[0]+walkingDir[0]][currentPoint[1] + walkingDir[1]]
-        currentPoint[0] = currentPoint[0]+walkingDir[0]
-        currentPoint[1] = currentPoint[1]+walkingDir[1]
+        walkingDir = getCurrentWalkingDirection(currentSign)
+        currentPoint[0] = currentPoint[0] + walkingDir[0]
+        currentPoint[1] = currentPoint[1] + walkingDir[1]
+        currentSign = map[currentPoint[0]][currentPoint[1]]
         point++
     }
 
@@ -87,4 +37,16 @@ function findStartingPoint(map) {
         })
     })
     return start
+}
+
+function getCurrentWalkingDirection(currentSign) {
+    switch (currentSign) {
+        case '|': return currentDirection === Direction.NORTH ? Direction.NORTH : Direction.SOUTH
+        case '-': return currentDirection === Direction.WEST ? Direction.WEST : Direction.EAST
+        case 'L': return currentDirection === Direction.SOUTH ? currentDirection = Direction.EAST : currentDirection = Direction.NORTH
+        case 'J': return currentDirection === Direction.EAST ? currentDirection = Direction.NORTH : currentDirection = Direction.WEST
+        case '7': return currentDirection === Direction.NORTH ? currentDirection = Direction.WEST : currentDirection = Direction.SOUTH
+        default:
+        case 'F': return currentDirection === Direction.NORTH ? currentDirection = Direction.EAST : currentDirection = Direction.SOUTH
+    }
 }

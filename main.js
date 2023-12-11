@@ -12,13 +12,14 @@ import { printLowestLocationFromSeedRanges } from "./tag-5/tag_5-2.js"
 import { printNumberOfWaysToBeatRecord } from "./tag-6/tag_6-1.js"
 import { printNumberOfWaysToBeatRecordInBigGame } from "./tag-6/tag_6-2.js"
 import { printTotalWinningOfCards } from "./tag-7/tag_7-1.js"
+import { printTotalWinningOfCardsWithJokers } from "./tag-7/tag_7-2.js"
 import { printSumOfExtrapolatedValues } from "./tag-9/tag_9-1.js"
 import { printPointFarthestFromStart } from "./tag-10/tag_10-1.js"
 import { printSumOfExtrapolatedValuesBackwards } from "./tag-9/tag_9-2.js"
 
 // Tag 1
 let fileName = './tag-1/aufgabe.txt'
-/*readFile(fileName, printSumOfCalibrationValues)
+readFile(fileName, printSumOfCalibrationValues)
 readFile(fileName, printRealSumOfCalibrationValues)
 
 // Tag 2
@@ -49,11 +50,12 @@ readFile(fileName, printNumberOfWaysToBeatRecordInBigGame)
 // Tag 7
 fileName = './tag-7/aufgabe.txt'
 readFile(fileName, printTotalWinningOfCards)
+readFile(fileName, printTotalWinningOfCardsWithJokers)
 
 // Tag 9
 fileName = './tag-9/aufgabe.txt'
 readFile(fileName, printSumOfExtrapolatedValues)
-readFile(fileName, printSumOfExtrapolatedValuesBackwards)*/
+readFile(fileName, printSumOfExtrapolatedValuesBackwards)
 
 // Tag 10
 fileName = './tag-10/aufgabe.txt'

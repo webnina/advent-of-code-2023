@@ -13,7 +13,7 @@ export function printSumOfAlGearRatios(fileData) {
         }
     }
 
-    console.log("Tag 3.2: Sum of all gear ratios:", sum);
+    console.log("Tag 3.2: Sum of all gear ratios:", sum)
 }
 
 function getGearRatio(lines, line, char) {

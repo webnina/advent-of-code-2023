@@ -1,6 +1,6 @@
-import { splitStringPerLine, splitCharactersAndDegits } from "../utils/splitter.js";
-import { getFinalCalibrationValue } from "./helper.js";
-import { sumUpValues } from "../utils/maths.js";
+import { splitStringPerLine, splitCharactersAndDegits } from "../utils/splitter.js"
+import { getFinalCalibrationValue } from "./helper.js"
+import { sumUpValues } from "../utils/maths.js"
 
 const digitMapping = new Map([
     ['one', '1'],
@@ -12,7 +12,7 @@ const digitMapping = new Map([
     ['seven', '7'],
     ['eight', '8'],
     ['nine', '9']
-]);
+])
 
 export function printRealSumOfCalibrationValues(fileData) {
     let lines = splitStringPerLine(fileData)

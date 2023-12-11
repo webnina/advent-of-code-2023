@@ -1,6 +1,6 @@
-import { splitStringPerLine } from "../utils/splitter.js";
-import { getFinalCalibrationValue } from "./helper.js";
-import { sumUpValues } from "../utils/maths.js";
+import { splitStringPerLine } from "../utils/splitter.js"
+import { getFinalCalibrationValue } from "./helper.js"
+import { sumUpValues } from "../utils/maths.js"
 
 export function printSumOfCalibrationValues(fileData) {
     const lines = splitStringPerLine(fileData)
