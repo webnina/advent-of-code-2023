@@ -1,5 +1,5 @@
 import { splitStringPerLine } from "../utils/splitter.js"
-import { quickSort, sumUpAllTotals } from "./helper.js"
+import { sort, sumUpAllTotals } from "./helper.js"
 
 const strengthMap = new Map([
     ['A', 14],
@@ -19,7 +19,7 @@ const strengthMap = new Map([
 
 export function printTotalWinningOfCardsWithJokers(fileData) {
     const lines = splitStringPerLine(fileData)
-    const sortedHandCards = quickSort(lines, strengthMap, true)
+    const sortedHandCards = sort(lines, strengthMap, true)
     let total = sumUpAllTotals(sortedHandCards)
 
     console.log("Tag 7.2: total winning of cards with jokers:", total)

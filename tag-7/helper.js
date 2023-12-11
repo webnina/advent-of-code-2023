@@ -20,56 +20,37 @@ export function sumUpAllTotals(cards) {
     }, 0)
 }
 
-export function quickSort(arr, strengthMap, withJoker) {
-    if (arr.length <= 1) {
-        return arr
-    }
-
+export function sort(array, strengthMap, withJoker) {
     playWithJoker = withJoker
     myStrengthMap = strengthMap
 
-    const pivot = arr[arr.length - 1]
-    const left = []
-    const right = []
-
-    for (let i = 0; i < arr.length - 1; i++) {
-        if (isHandWeakerThanPivot(arr[i], pivot)) {
-            left.push(arr[i])
-        } else {
-            right.push(arr[i])
-        }
-    }
-
-    return [
-        ...quickSort(left, strengthMap, withJoker),
-        pivot,
-        ...quickSort(right, strengthMap, withJoker)]
+    return array.sort((a, b) =>  isHandWeakerThanNext(a, b))
 }
 
-function isHandWeakerThanPivot(hand, pivot) {
+function isHandWeakerThanNext(hand, next) {
     const [handCards, ] = hand.split(" ")
-    const [pivotCards, ] = pivot.split(" ")
+    const [nextCards, ] = next.split(" ")
     const handCardType = getHandCardType(handCards)
-    const pivotCardType = getHandCardType(pivotCards)
+    const nextCardType = getHandCardType(nextCards)
 
-    if (handCardType < pivotCardType) {
-        return true
-    } else if (handCardType > pivotCardType) {
-        return false
+    if (handCardType < nextCardType) {
+        return -1
+    } else if (handCardType > nextCardType) {
+        return 1
     } else {
-        return handCardsAreWeaker(handCards, pivotCards)
+        return handCardsAreWeaker(handCards, nextCards)
     }
 }
 
-function handCardsAreWeaker(handCards, pivotCards) {
+function handCardsAreWeaker(handCards, nextCards) {
     for (let i = 0; i < handCards.length; i++) {
-        if (myStrengthMap.get(handCards[i]) < myStrengthMap.get(pivotCards[i])) {
-            return true
-        } else if (myStrengthMap.get(handCards[i]) > myStrengthMap.get(pivotCards[i])) {
-            return false
+        if (myStrengthMap.get(handCards[i]) < myStrengthMap.get(nextCards[i])) {
+            return -1
+        } else if (myStrengthMap.get(handCards[i]) > myStrengthMap.get(nextCards[i])) {
+            return 1
         }
     }
-    return false
+    return 1
 }
 
 function getHandCardType(hand) {

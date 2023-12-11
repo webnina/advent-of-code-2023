@@ -1,5 +1,5 @@
 import { removeCharacters, splitStringPerLine } from "../utils/splitter.js"
-import {fillAlmanac, getMinLocationForSeeds} from "./helper.js"
+import { fillAlmanac, getMinLocationForSeeds } from "./helper.js"
 
 export function printLowestLocationFromSeedRanges(fileData) {
     let lines = splitStringPerLine(fileData)
