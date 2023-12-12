@@ -58,3 +58,9 @@
   6701
 - [Part 2](https://github.com/webnina/advent-of-code-2023/blob/main/tag-10/tag_10-2.js)
   coming soon
+
+## Tag 11: Galaxie
+- [Part 1](https://github.com/webnina/advent-of-code-2023/blob/main/tag-11/tag_11-1.js)
+  9693756
+- [Part 2](https://github.com/webnina/advent-of-code-2023/blob/main/tag-11/tag_11-2.js)
+  717878258016

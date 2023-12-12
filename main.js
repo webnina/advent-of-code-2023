@@ -18,6 +18,8 @@ import { printPointFarthestFromStart } from "./tag-10/tag_10-1.js"
 import { printSumOfExtrapolatedValuesBackwards } from "./tag-9/tag_9-2.js"
 import { printStepsRequiredToZZZ } from "./tag-8/tag_8-1.js"
 import { printStepsUntilAllEndsWithZ } from "./tag-8/tag_8-2.js"
+import { printSumOfShortestPaths } from "./tag-11/tag_11-1.js"
+import { printSumOfShortestPathsExtreme } from "./tag-11/tag_11-2.js"
 
 // Tag 1
 let fileName = './tag-1/aufgabe.txt'
@@ -67,3 +69,8 @@ readFile(fileName, printSumOfExtrapolatedValuesBackwards)
 // Tag 10
 fileName = './tag-10/aufgabe.txt'
 readFile(fileName, printPointFarthestFromStart)
+
+// Tag 11
+fileName = './tag-11/aufgabe.txt'
+readFile(fileName, printSumOfShortestPaths)
+readFile(fileName, printSumOfShortestPathsExtreme)
