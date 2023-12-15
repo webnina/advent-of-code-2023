@@ -21,56 +21,66 @@ import { printStepsUntilAllEndsWithZ } from "./tag-8/tag_8-2.js"
 import { printSumOfShortestPaths } from "./tag-11/tag_11-1.js"
 import { printSumOfShortestPathsExtreme } from "./tag-11/tag_11-2.js"
 
-// Tag 1
-let fileName = './tag-1/aufgabe.txt'
-readFile(fileName, printSumOfCalibrationValues)
-readFile(fileName, printRealSumOfCalibrationValues)
+run(1)
 
-// Tag 2
-fileName = './tag-2/aufgabe.txt'
-readFile(fileName, printAmountOfPossibleGames)
-readFile(fileName, printSumOfPower)
-
-// Tag 3
-fileName = './tag-3/aufgabe.txt'
-readFile(fileName, printSumOfAllPartNumbers)
-readFile(fileName, printSumOfAlGearRatios)
-
-// Tag 4
-fileName = './tag-4/aufgabe.txt'
-readFile(fileName, printPointsInTotal)
-readFile(fileName, printAmountOfScratchcardCopies)
-
-// Tag 5
-fileName = './tag-5/test-data.txt'
-readFile(fileName, printLowestLocation)
-readFile(fileName, printLowestLocationFromSeedRanges)
-
-// Tag 6
-fileName = './tag-6/aufgabe.txt'
-readFile(fileName, printNumberOfWaysToBeatRecord)
-readFile(fileName, printNumberOfWaysToBeatRecordInBigGame)
-
-// Tag 7
-fileName = './tag-7/aufgabe.txt'
-readFile(fileName, printTotalWinningOfCards)
-readFile(fileName, printTotalWinningOfCardsWithJokers)
-
-// Tag 8
-fileName = './tag-8/aufgabe.txt'
-readFile(fileName, printStepsRequiredToZZZ)
-readFile(fileName, printStepsUntilAllEndsWithZ)
-
-// Tag 9
-fileName = './tag-9/aufgabe.txt'
-readFile(fileName, printSumOfExtrapolatedValues)
-readFile(fileName, printSumOfExtrapolatedValuesBackwards)
-
-// Tag 10
-fileName = './tag-10/aufgabe.txt'
-readFile(fileName, printPointFarthestFromStart)
-
-// Tag 11
-fileName = './tag-11/aufgabe.txt'
-readFile(fileName, printSumOfShortestPaths)
-readFile(fileName, printSumOfShortestPathsExtreme)
+function run(day) {
+    let fileName
+    switch (day) {
+        case 1:
+            fileName = './tag-1/aufgabe.txt'
+            readFile(fileName, printSumOfCalibrationValues)
+            readFile(fileName, printRealSumOfCalibrationValues)
+            break
+        case 2:
+            fileName = './tag-2/aufgabe.txt'
+            readFile(fileName, printAmountOfPossibleGames)
+            readFile(fileName, printSumOfPower)
+            break
+        case 3:
+            fileName = './tag-3/aufgabe.txt'
+            readFile(fileName, printSumOfAllPartNumbers)
+            readFile(fileName, printSumOfAlGearRatios)
+            break
+        case 4:
+            fileName = './tag-4/aufgabe.txt'
+            readFile(fileName, printPointsInTotal)
+            readFile(fileName, printAmountOfScratchcardCopies)
+            break
+        case 5:
+            fileName = './tag-5/aufgabe.txt'
+            readFile(fileName, printLowestLocation)
+            readFile(fileName, printLowestLocationFromSeedRanges)
+            break
+        case 6:
+            fileName = './tag-6/aufgabe.txt'
+            readFile(fileName, printNumberOfWaysToBeatRecord)
+            readFile(fileName, printNumberOfWaysToBeatRecordInBigGame)
+            break
+        case 7:
+            fileName = './tag-7/aufgabe.txt'
+            readFile(fileName, printTotalWinningOfCards)
+            readFile(fileName, printTotalWinningOfCardsWithJokers)
+            break
+        case 8:
+            fileName = './tag-8/aufgabe.txt'
+            readFile(fileName, printStepsRequiredToZZZ)
+            readFile(fileName, printStepsUntilAllEndsWithZ)
+            break
+        case 9:
+            fileName = './tag-9/aufgabe.txt'
+            readFile(fileName, printSumOfExtrapolatedValues)
+            readFile(fileName, printSumOfExtrapolatedValuesBackwards)
+            break
+        case 10:
+            fileName = './tag-10/aufgabe.txt'
+            readFile(fileName, printPointFarthestFromStart)
+            break
+        case 11:
+            fileName = './tag-11/aufgabe.txt'
+            readFile(fileName, printSumOfShortestPaths)
+            readFile(fileName, printSumOfShortestPathsExtreme)
+            break
+        default:
+            console.log('nothing found for day', day)
+    }
+}
