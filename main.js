@@ -20,8 +20,10 @@ import { printStepsRequiredToZZZ } from "./tag-8/tag_8-1.js"
 import { printStepsUntilAllEndsWithZ } from "./tag-8/tag_8-2.js"
 import { printSumOfShortestPaths } from "./tag-11/tag_11-1.js"
 import { printSumOfShortestPathsExtreme } from "./tag-11/tag_11-2.js"
+import { printSumOfHashResults } from "./tag-15/tag_15-1.js"
+import {printFocusingPowerOfLensConfiguration} from "./tag-15/tag_15-2.js";
 
-run(1)
+run(15)
 
 function run(day) {
     let fileName
@@ -79,6 +81,11 @@ function run(day) {
             fileName = './tag-11/aufgabe.txt'
             readFile(fileName, printSumOfShortestPaths)
             readFile(fileName, printSumOfShortestPathsExtreme)
+            break
+        case 15:
+            fileName = './tag-15/aufgabe.txt'
+            readFile(fileName, printSumOfHashResults)
+            readFile(fileName, printFocusingPowerOfLensConfiguration)
             break
         default:
             console.log('nothing found for day', day)

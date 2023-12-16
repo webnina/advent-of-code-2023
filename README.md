@@ -55,3 +55,9 @@
   9693756
 - [Part 2](https://github.com/webnina/advent-of-code-2023/blob/main/tag-11/tag_11-2.js)
   717878258016
+
+## Tag 15: Rentier ASCII
+- [Part 1](https://github.com/webnina/advent-of-code-2023/blob/main/tag-15/tag_15-1.js)
+  494980
+- [Part 2](https://github.com/webnina/advent-of-code-2023/blob/main/tag-15/tag_15-2.js)
+  247933
